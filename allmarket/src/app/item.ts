@@ -5,3 +5,9 @@ export class Item {
 	mark: string;
 	
 };
+
+export class ItemDetail {
+	
+	item: Item = null;
+	
+};

@@ -9,13 +9,13 @@ import com.learningpurpose.allmarket.core.Sku;
 
 @RestController
 //@RequestMapping("/item")
-public class Controller {
+public class Controller implements RestItemService {
 	
 	@Autowired
 	private ItemService service;
 	
 	@GetMapping("/{sku}")
-	public Item get(@PathVariable Sku sku) {
+	public Item getItem(@PathVariable Sku sku) {
 		Item item = service.getItem(sku);
 		if (item == null)
 			throw new ItemNotFoundException(sku);

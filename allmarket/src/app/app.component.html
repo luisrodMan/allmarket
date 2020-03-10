@@ -1,5 +1,6 @@
 
 {{title}}
 
-<app-header></app-header>
-<app-item-view></app-item-view>
+<input type="search" id="search-box" (keyup.enter)="onSearch($event.target.value)"/>
+
+<router-outlet></router-outlet>

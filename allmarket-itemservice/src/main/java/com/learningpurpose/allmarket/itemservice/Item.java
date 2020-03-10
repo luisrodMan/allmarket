@@ -14,7 +14,7 @@ public class Item implements Serializable {
 	
 	@EmbeddedId
 	private Sku sku;
-	private String name;
+	private String description;
 	private String mark;
 	
 	public Item() {
@@ -29,12 +29,12 @@ public class Item implements Serializable {
 		return sku;
 	}
 	
-	public String getName() {
-		return name;
+	public String getDescription() {
+		return description;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 	public String getMark() {
